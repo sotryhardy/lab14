@@ -1,0 +1,31 @@
+class pojazd:
+    def __init__(self, typ, nazwa, nm_tablica):
+        self.typ = typ
+        self.nazwa = nazwa
+        self.nm_tablica = nm_tablica
+    def cout_typ(self):
+        print(self.nazwa + " to " + self.typ)
+    def numer(self):
+        print(self.nazwa + " jest zarejestrowana na numer " + self.nm_tablica)
+
+class auto(pojazd):
+    def __init__(self, nazwa, nm_tablica):
+        super().__init__('auto',nazwa, nm_tablica)
+    def ilkol(self):
+        print( self.nazwa + " posiada 4 koła")
+
+class moto(pojazd):
+    def __init__(self, nazwa, nm_tablica):
+        super().__init__('motocykl', nazwa, nm_tablica)
+    def ilkol(self):
+        print(self.nazwa + " posiada 2 koła")
+yamaha = moto('Yamaha', 'EU43298')
+audi = auto('Audi', 'EU42389')
+yamaha.cout_typ()
+audi.cout_typ()
+yamaha.numer()
+audi.numer()
+yamaha.ilkol()
+audi.ilkol()
+
+
