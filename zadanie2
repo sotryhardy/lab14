@@ -1,0 +1,65 @@
+class zwierze:
+    def __init__(self, rasa, kolor):
+        self.rasa = rasa
+        self.kolor = kolor 
+    def ckolor(self):
+        print(self.rasa + ' jest ' + self.kolor)
+
+class kot(zwierze):
+    def __init__(self,kolor, imie):
+        super().__init__('kot', kolor)
+        self.imie = imie
+    def cImie(self):
+        print("Kot ma imie " + self.imie)
+    def spi(self):
+        print(self.imie + " spi :)")
+
+class pies(zwierze):
+    def __init__(self,kolor,imie):
+        super().__init__('pies', kolor)
+        self.imie = imie
+    def cImie(self):
+        print('Pies ma imie ' + self.imie)
+    def biegnie(self, szybkosc):
+        print(self.imie + " biegnie z prędkością ", szybkosc, " km/god ")
+
+class ptak(zwierze):
+    def __init__(self,kolor,imie):
+        super().__init__('ptak', kolor)
+        self.imie = imie
+    def cImie(self):
+        print('Ptak ma imie ' + self.imie)
+    def leci(self,predkosc):
+        print(self.imie + "leci  z prędkością ", predkosc, "km/god")
+   
+class ryba(zwierze):
+    def __init__(self,kolor):
+        super().__init__('ryba', kolor)
+    def cImie(self):
+        print('Ryba nie ma imenia :(')
+    def plywa(self, szybkosc):
+        print("Ryba pływa z prędkością " ,szybkosc, " km/god")
+
+barsik = kot('czarny', 'Barsik')
+skif = pies('brązowy', 'Skif')
+kiesza = ptak('źółty', 'Kiesza')
+ryba1 = ryba('szary')
+
+barsik.ckolor()
+skif.ckolor()
+kiesza.ckolor()
+ryba1.ckolor()
+
+print('')
+
+barsik.cImie()
+skif.cImie()
+kiesza.cImie()
+ryba1.cImie()
+
+print('')
+
+barsik.spi()
+skif.biegnie(20)
+kiesza.leci(8)
+ryba1.plywa(12)
