@@ -1,0 +1,73 @@
+import math
+
+class figura:
+    def __init__(self, a):
+        self.a = a
+
+class trójkąt60(figura):
+    def __init__(self, a):
+        self.a = a
+    def S(self):
+        print("Obszar trójkąta jest równy ", ((self.a*self.a*math.sqrt(3)/4)))
+    def P(self):
+        print("Perymetr trójkąta jest równy ", self.a*3)
+    def ROkrąga(self):
+        print("Promień wpisanego okrągu jest równy", (self.a*math.sqrt(3))/6)
+
+class prostokąt(figura):
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def S(self):
+        print("Obszar trójkąta jest równy ", (self.a * self.b * 0.5))
+    def P(self):
+        print("Perymetr trójkąta jest równy ", self.a + self.b + math.sqrt(self.a*self.a + self.b*self.b))
+    def ROkrąga(self):
+        print("Promień wpisanego okrągu jest równy", (self.a*self.b/(self.a+self.b+math.sqrt(self.a*self.a + self.b*self.b))))
+
+class kwadrat(figura):
+    def __init__(self, a):
+        self.a = a
+    def S(self):
+        print("Obszar kwadrata jest równy ", (self.a*self.a))
+    def P(self):
+        print("Perymetr kwadrata jest równy ", self.a*4)
+    def ROkrąga(self):
+        print("Promień wpisanego okrągu jest równy", self.a/2)
+
+class koło(figura):
+    def __init__(self, a):
+        self.a = a
+    def S(self):
+        print("Obszar trójkąta jest równy ", math.pi*self.a*self.a)
+    def C(self):
+        print("Obwód jest równy ",math.pi*self.a*2)
+
+trójkąt = trójkąt60(int(input('Wprowadź długość boku trójkąta: ')))
+
+trójkąt.S()
+trójkąt.P()
+trójkąt.ROkrąga()
+
+print('')
+
+prostokąt1 = prostokąt(int(input('Wprowadź długość jednej strony prostokąt: ')),int(input('Wprowadź długość drudiej strony prostokąt: ')))
+
+prostokąt1.S()
+prostokąt1.P()
+prostokąt1.ROkrąga()
+
+print('')
+
+kwadrat1 = kwadrat(int(input('Wprowadź długość jednej strony kwadrata: ')),int(input('Wprowadź długość drudiej strony kwadrata: ')))
+
+kwadrat1.S()
+kwadrat1.P()
+kwadrat1.ROkrąga()
+
+print('')
+
+koło1=koło(int(input('Wprowadź radius: ')))
+
+koło1.S()
+koło1.C()
